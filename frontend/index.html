@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+    <div class="container">
+        <header role="banner">
+            <h1>Todo List</h1>
+        </header>
+        <main role="main">
+            <form id="taskForm">
+                <input type="text" name="title" id="title" required placeholder="Informe o título da tarefa" />
+                <textarea id="description" name="description" required
+                    placeholder="Informe a descrição da tarefa"></textarea>
+                <button type="submit">Salvar Tarefa</button>
+            </form>
+            <ul id="taskList"></ul>
+        </main>
+        <footer role="contentinfo">&copy; 2024 Todo List</footer>
+    </div>
+    <dialog id="editDialog">
+        <form method="dialog">
+            <label for="editTitle">Título:</label>
+            <input type="text" id="editTitle" name="editTitle" required />
+            <label for="editDescription">Descrição:</label>
+            <textarea id="editDescription" name="editDescription" required></textarea>
+            <menu>
+                <button id="cancelButton" type="button">Cancelar</button>
+                <button type="submit">Editar</button>
+            </menu>
+        </form>
+    </dialog>
+    <script src="./index.js"></script>
+</body>
+
+</html>
